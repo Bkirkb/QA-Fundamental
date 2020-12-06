@@ -8,6 +8,8 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 ## Table of Contents
 * [Brief](#brief)
 	* [Requirements](#requirements)
+	  *[Scope](#scope)
+	  *[Platform Specific](#platform-specific-requirements)
 * [Ideas](#ideas)
 	* [Initial Idea](initial-idea)
  	* [Final Idea](#final-idea)
@@ -25,6 +27,8 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 ### Brief
 
 #### Requirements
+##### Scope
+##### Platform Specific Requirements
 
 ### Ideas
 
