@@ -7,12 +7,12 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 
 ## Table of Contents
 * [Brief](#brief)
-	* [Requirements](#requirements)
-	  *[Scope](#scope)
-	  *[Platform Specific](#platform-specific-requirements)
+  * [Requirements](#requirements)
+    * [Scope](#scope)
+    * [Platform Specific](#platform-specific-requirements)
 * [Ideas](#ideas)
-	* [Initial Idea](initial-idea)
- 	* [Final Idea](#final-idea)
+  * [Initial Idea](initial-idea)
+  * [Final Idea](#final-idea)
 * [Documentation](#documentation)
   * [Architecture](#architecture)
     *  [Database Structure](#database-structure)
