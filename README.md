@@ -27,6 +27,7 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 ### Brief
 
 #### Requirements
+
 ##### Scope
 ##### Platform Specific Requirements
 
@@ -44,6 +45,8 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 ##### CI Pipeline
 #### Project Tracking
 #### Risk Assessment
+ The Risk Assessment for the Project can be found in full [Here] : (https://docs.google.com/spreadsheets/d/1hfYDhvG_HrHr0DTENwdTv7SPDeCxY9-hMgxS1r_XXLA/edit#gid=0)
+
 #### Testing
 #### Front End Design
 #### Known Issues
