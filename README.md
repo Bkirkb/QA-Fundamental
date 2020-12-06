@@ -18,7 +18,7 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
     *  [Database Structure](#database-structure)
     * [CI Pipeline](#ci-pipeline) 
   * [Project Tracking](#project-tracking)
-  * [Risk Assessment](#risk-assessment)
+  * [Risk Assessments](#risk-assessment)
   * [Testing](#testing)
   * [Front-End Design](#front-end-design)
   * [Known Issues](#known-issues)
