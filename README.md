@@ -47,6 +47,8 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 #### Risk Assessment
  The Risk Assessment for the Project can be found in full [Here] : (https://docs.google.com/spreadsheets/d/1hfYDhvG_HrHr0DTENwdTv7SPDeCxY9-hMgxS1r_XXLA/edit#gid=0)
 
+Below is an image of most of the inititial risk assessment, likely to be expanded upon before the end of the project.
+[!risk-assessment](Documentation/Risk-Assessment.png)
 #### Testing
 #### Front End Design
 #### Known Issues
