@@ -12,7 +12,7 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 	* [Initial Idea](initial-idea)
  	* [Final Idea](#final-idea)
 * [Documentation](#documentation)
-	* [Architecture](#architecture)
+ * [Architecture](#architecture)
 	 * [Database Structure](#database-structure)
 	 * [CI Pipeline](#ci-pipeline)
  * [Project Tracking](#project-tracking)
