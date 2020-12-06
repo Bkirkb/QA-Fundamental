@@ -7,14 +7,14 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 
 ## Table of Contents
 * [Brief](#brief)
- * [Requirements](#requirements)
+	* [Requirements](#requirements)
 * [Ideas](#ideas)
- * [Initial Idea](initial-idea)
- * [Final Idea](#final-idea)
+	* [Initial Idea](initial-idea)
+ 	* [Final Idea](#final-idea)
 * [Documentation](#documentation)
- * [Architecture](#architecture)
-  * [Database Structure](#database-structure)
-  * [CI Pipeline](#ci-pipeline)
+	* [Architecture](#architecture)
+	 * [Database Structure](#database-structure)
+	 * [CI Pipeline](#ci-pipeline)
  * [Project Tracking](#project-tracking)
  * [Risk Assessment](#risk-assessment)
  * [Testing](#testing)
@@ -32,12 +32,12 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 
 #### Final idea
 
-## Documentation
+### Documentation
 
-### Architecture
+#### Architecture
 
-#### Database Structure
-#### CI Pipeline
+##### Database Structure
+##### CI Pipeline
 ### Project Tracking
 ### Risk Assessment
 ### Testing
