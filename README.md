@@ -6,21 +6,21 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 # Fishing Locations/Spots App
 
 ## Table of Contents
-* [Brief] (#brief)
- * [Requirements] (#requirements)
+* [Brief](#brief)
+ * [Requirements](#requirements)
 * [Ideas](#ideas)
  * [Initial Idea](initial-idea)
- * [Final Idea] (#final-idea)
-* [Documentation] (#documentation)
+ * [Final Idea](#final-idea)
+* [Documentation](#documentation)
  * [Architecture](#architecture)
-  * [Database Structure] (#database-structure)
-  * [CI Pipeline] (#ci-pipeline)
- * [Project Tracking] (#project-tracking)
- * [Risk Assessment] (#risk-assessment)
- * [Testing] (#testing)
- * [Front-End Design] (#front-end-design)
- * [Known Issues] (#known-issues)
- * [Future Improvements] (#future-improvements)
+  * [Database Structure](#database-structure)
+  * [CI Pipeline](#ci-pipeline)
+ * [Project Tracking](#project-tracking)
+ * [Risk Assessment](#risk-assessment)
+ * [Testing](#testing)
+ * [Front-End Design](#front-end-design)
+ * [Known Issues](#known-issues)
+ * [Future Improvements](#future-improvements)
 
 ### Brief
 
