@@ -89,10 +89,31 @@ An app like this would meet the CRUD functionality requirement by allowing:
 #### Architecture
 
 ##### Database Structure
+To begin planning for a managed relational database the data involved for the app had to be brainstormed and recorded, below is the initial draft of the possible fields which may be required for an app of this nature.
+![InitialDataStructure](Documentation/InitialArchitecture.PNG)
+The Data above covers the tables and fields that I felt would be necessary at the beginning of the project, without thinking about the data types, or any specific relationships at the time. 3 entities, each with many fields and the primary/foreign keys which may be required.
+
+This initial dataset was trimmed down to a more managable size and it's format was altered to fit that of what a regular entity relationship diagram would look like. Below is V 1.1 of the data structure.
+
+![ERDV1.0](Documentation/ERDV1.0.PNG)
+As can be seen, this ERD is quite complex with rather ambiguous relationships, and will likely need to be further trimmed to ensure that the MVP CRUD functionality is met. It is worth noting that any trimmed fields/data can likely be re-introduced in a future sprint.
+
+![ERDV1.1](Documentation/ERDV1.1.PNG)
+This version of the database structure is a simplified version of the above, which illustrates much clearer relationships between the tables.
+
+* Each User is attributed to zero or one to many catches
+* Each User can be attributed to zero or one to many top catches
+* Each Catch can contain only one fish, however fish with the same ID can be present in many catches
+* Top Catches are calculated by comparing a newly enetered catch into the catch diary with the catches that are already present, if the new catch has a higher weight value, it is attributed as the new top catch, and the top catch is added to the user profile.
+
+![ERDV1.2](Documentation/ERDV1.2.PNG)
+The final version of the database structure slightly changes the previous, with a simple "Most active users" addition and with even more clear relationships, via the use of notation to the branches. The most active users table was added into the database structure to make the database feel more complete and add to the user experience. 
 
 ##### CI Pipeline
 #### Project Tracking
 The project has been tracked as specified using a kanban style board, using Trello, which can be found [Here](https://trello.com/b/mVD3VaEn/sprint-1-two-week-duration). The Sprint will last/lasted two weeks, starting on the 6th December and Ending on 20th December. By the end of the first week all Documentation should be complete, and by the end of the Second week the MVP will be able to be delivered to the client as specified.
+
+Update 17th Dec: Project deadline has been extended to January, as such the sprint has been modified and the timescales have been adjusted. 
 
 #### Risk Assessment
  The Risk Assessment for the Project can be found in full [Here](https://docs.google.com/spreadsheets/d/1hfYDhvG_HrHr0DTENwdTv7SPDeCxY9-hMgxS1r_XXLA/edit#gid=0)
