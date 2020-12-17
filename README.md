@@ -98,7 +98,7 @@ This initial dataset was trimmed down to a more managable size and it's format w
 ![ERDV1.0](Documentation/ERDV1.0.png)
 As can be seen, this ERD is quite complex with rather ambiguous relationships, and will likely need to be further trimmed to ensure that the MVP CRUD functionality is met. It is worth noting that any trimmed fields/data can likely be re-introduced in a future sprint.
 
-![ERDV1.1](Documentation/ERDV1.1.png)
+![ERDV1.1](Documentation/ERDV1.1.PNG)
 This version of the database structure is a simplified version of the above, which illustrates much clearer relationships between the tables.
 
 * Each User is attributed to zero or one to many catches
