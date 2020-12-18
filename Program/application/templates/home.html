@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block body %}
+<h2> Please Log In or Register</h2>
+<br><br>
+<form action='' method='POST'>
+    {{ form.hidden_tag() }}
+    {{ form.username.label}} {{form.username}}
+    {{ form.userpassword.label}} {{form.userpassword}}
+    {{ form.forename.label}} {{form.forename}}
+    {{ form.surname.label}} {{form.surname}}
+    {{ form.gear.label}} {{ form.gear}}
+    {{ form.email.label}} {{ form.email}}
+<br><br>
+    {{form.submit.label}} {{form.submit}}
+</form>
+{% endblock body %}
