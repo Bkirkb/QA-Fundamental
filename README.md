@@ -109,6 +109,9 @@ This version of the database structure is a simplified version of the above, whi
 ![ERDV1.2](Documentation/ERDV1.2.png)
 The final version of the database structure slightly changes the previous, with a simple "Most active users" addition and with even more clear relationships, via the use of notation to the branches. The most active users table was added into the database structure to make the database feel more complete and add to the user experience. 
 
+![ERDV1.3](Documentation/ERDV1.4png)
+After revisions, the design has been greatly simplified for the first sprint, to deliver the MVP as expected. a single one to many relationship can be seen between the Fish and Catches table, with the fish ID linking the two together.
+
 ##### CI Pipeline
 #### Project Tracking
 The project has been tracked as specified using a kanban style board, using Trello, which can be found [Here](https://trello.com/b/mVD3VaEn/sprint-1-two-week-duration). The Sprint will last/lasted two weeks, starting on the 6th December and Ending on 20th December. By the end of the first week all Documentation should be complete, and by the end of the Second week the MVP will be able to be delivered to the client as specified.
