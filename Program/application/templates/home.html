@@ -1,16 +1,37 @@
 {% extends "layout.html" %}
 {% block body %}
-<h2> Please Log In or Register</h2>
-<br><br>
-<form action='' method='POST'>
-    {{ form.hidden_tag() }}
-    {{ form.username.label}} {{form.username}}
-    {{ form.userpassword.label}} {{form.userpassword}}
-    {{ form.forename.label}} {{form.forename}}
-    {{ form.surname.label}} {{form.surname}}
-    {{ form.gear.label}} {{ form.gear}}
-    {{ form.email.label}} {{ form.email}}
-<br><br>
-    {{form.submit.label}} {{form.submit}}
-</form>
+
+<div id=div1 style="display: inline-block; position:absolute; top: 150; left: 350; background-color: rgba(205, 235, 181, 0.5); width: 500px;">
+    <h2>Lifetime Catches</h2>
+{% for catch in all_catches %}
+        <span> Lifetime Catch No : {{catch.id}}</span>
+        <br>
+        <span> Fish Caught : {{catch.fishname}}</span>
+        <br>
+        <span> Weight of Catch : {{catch.fishweight}} Lbs</span>
+        <br><br>
+        <span> Catch Description : {{catch.description}}</span>
+        <br>
+        <form action="{{url_for('update', id=catch.id) }}" style="display: inline;">
+        <input type=submit value="Update" style="background: rgba(255, 166, 0, 0.3); border: none;">
+        </form>
+        <form action="{{url_for('delete', id=catch.id) }}" style="display: inline;">
+            <input type=submit value="Delete" style="border: none; background: rgba(255, 0, 0, 0.415)">
+        </form>
+        <br><br>
+{% endfor %}
+</div>
+<div id=div2 style="display: inline-block; position: absolute; top: 150; right: 350; width: 500px; background-color: rgba(205, 235, 181, 0.5);">
+<h2>Fish Library/History</h2>
+{% for fish in all_fish %}
+       <span> Name of fish : {{fish.name}}</span>
+       <br>
+       <span> ID of fish : {{fish.id}}</span>
+        <br>
+        <span> Minumum Weight : {{fish.minweight}}</span>
+        <br>
+        <span> Maximum Weight : {{fish.maxweight}}</span>
+        <br><br>
+{% endfor %}
+</div>
 {% endblock body %}

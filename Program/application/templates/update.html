@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<br><br>
+Original Catch: {{ catch.id }}
+<br>
+Description: {{ catch.description}}
+<br><br>
+<form action='' method='POST'>
+{{ form.hidden_tag() }}    
+{{ form.description.label }} {{ form.description }}
+<br>
+{{ form.submit2.label }} {{ form.submit2 }}
+</form>
+{% endblock body %}
