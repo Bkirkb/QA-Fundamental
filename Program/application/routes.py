@@ -29,7 +29,6 @@ def create():
                 db.session.commit()
                 return redirect(url_for("home"))
             else:
-                fishlen = len(all_fish)
                 # for each fish in the fish dictionary check if entered fish is part of the records.
                 for fish in all_fish:
                     if form.name.data.lower() == fish.name:
@@ -64,7 +63,7 @@ def update(id):
         return redirect(url_for("home"))
     return render_template("update.html", form=form, title="Update Catch Description",catch=catch)
 
-@app.route('/delete/<int:id>', methods=["GET"])
+@app.route('/delete/<int:id>', methods=["GET","POST"])
 def delete(id):
     catch = Catches.query.filter_by(id=id).first()
     db.session.delete(catch)

@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 {% block body %}
 
-<div id=div1 style="display: inline-block; position:absolute; top: 150; left: 350; background-color: rgba(205, 235, 181, 0.5); width: 500px;">
+<div id=div1 style="display: inline-block; position:absolute; top: 150; left: 350; background-color: rgba(205, 235, 181, 0.5); width: 500px; height: auto;">
     <h2>Lifetime Catches</h2>
 {% for catch in all_catches %}
         <span> Lifetime Catch No : {{catch.id}}</span>
@@ -21,7 +21,7 @@
         <br><br>
 {% endfor %}
 </div>
-<div id=div2 style="display: inline-block; position: absolute; top: 150; right: 350; width: 500px; background-color: rgba(205, 235, 181, 0.5);">
+<div id=div2 style="display: inline-block; position: absolute; top: 150; right: 350; width: 500px; height: auto; background-color: rgba(205, 235, 181, 0.5);">
 <h2>Fish Library/History</h2>
 {% for fish in all_fish %}
        <span> Name of fish : {{fish.name}}</span>
