@@ -126,7 +126,7 @@ Below is an image of most of the inititial risk assessment, likely to be expande
 #### Testing
 The project achieved the minumum viable product by utilising two testing methods, Unit Testing (Pytest) and Integration testing (Selenium). The following section will detail the testing process and how the total coverage of 70% was met for the unit tests, and how in future 100% coverage could be achieved.
 ##### Unit-Testing
-![imports-test-base](Docmentation/testing1.PNG)
+![imports-test-base](Documentation/testing1.PNG)
 To begin unit tests the relevant imports must be made, which are the unittest module from Python, flask and flask_testing to import url_for and TestCase (which is the foundation to run all unit tests, after setting up the TestBase to use TestCase). finally the app and the database is imported, along with the relevant models to be tested.
 
 Once all imports are complete the TestBase is set up, the first function to run is similar to that within the init.py file, and assigns the database properties for the temporary database to use. SQLite was used in this instance so that the main database did not get affected.
@@ -152,7 +152,18 @@ The Delete route works in a similar way, but instead of asserting that the catch
 ![coveragereport](Documentation/testing6.PNG)
 As can be seen, the unit tests have tested most functionality within the application, with only 53% of the lines within the routes being tested, which is attributed to the python logic mentioned earlier. In the future with more knowledge of assertions and unit testing in general, 100% coverage would be highly achievable.
 
-##### Integration Testing
+##### Integration Testing with Selenium
+![importstestbase](Documentation/testing7.PNG)
+Import all relevant modules for testing purposes, Create the testbase using a mock database as with Unit testing. The set-up primarily focuses on setting up the Selenium crhomium driver, and dropping, creating and populating the test database. The first test asserts that the driver is up and running on localhost:5000, verifying it with a response code of 200.
+![testcreate1](Documentation/testing8.PNG)
+Use the selenium chrome driver to target the navigation element of the home page, click the add catch button, and populate the form with the required data.
+assert that the user is redirected to the home page, and assert that a new Catch is present, by searching for id=2 and targeting the description attribute, when the database was only set up with a single catch.
+![testupdate1](Documentation/testing9.PNG)
+Same as above but relating to the update function, does not create a new catch and instead updates the existing catch with a new description. Test asserts that the user has been redirected to the home page
+on form completion, and that the new description is the only description present.
+![testdelete1](Documentation/testing10.PNG)
+The final integration test is to test the delete buttons present on each catch. Selenium is used to target the delete element, and the assertion is made that the Catch table's first entry now returns a None type Object.
+If statement at the bottom to run the live server.
 
 #### Front End Design
 #### Known Issues
