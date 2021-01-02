@@ -17,10 +17,10 @@ class TestBase(TestCase):
 
 	def setUp(self):
 		db.create_all()
-		test_fish = Fish(name="test_fish", minweight=1800, maxweight=2500)
+		test_fish = Fish(name="test fish", minweight=1800, maxweight=2500)
 		db.session.add(test_fish)
 		db.session.commit()
-		test_catch = Catches(fishname="test_fish", fishweight=2030, fishid=test_fish.id, description="Jeeez what a catch")
+		test_catch = Catches(fishname="test fish", fishweight=2030, fishid=test_fish.id, description="Jeeez what a catch")
 		db.session.add(test_catch)
 		db.session.commit()
 
@@ -57,7 +57,7 @@ class TestRead(TestBase):
 # read the database to ensure that the fish is present by looking for test_fish (it is present within the catch too)
 	def test_read_fish(self):
 		response = self.client.get(url_for('home'))
-		self.assertIn(b"test_fish", response.data)
+		self.assertIn(b"test fish", response.data)
 
 # read the database to ensure that the catch has been entered, since the fish table should only be storing 1800 and 2500, the 2030
 # can only be present in the catch table.
@@ -71,7 +71,7 @@ class TestCreate(TestBase):
 	def test_create_catch(self):
 		response = self.client.post(
 			url_for('create'),
-			data=dict(fishname="test_fish", fishweight=2000, description="Blimey What a catch"),
+			data=dict(fishname="test fish", fishweight=2000, description="Blimey What a catch"),
 			follow_redirects = True
 		)
 		self.assertIn(b"Blimey What a catch", response.data)
@@ -84,7 +84,7 @@ class TestCreate(TestBase):
 
 		response = self.client.post(
 			url_for('create'),
-			data=dict(fishname="test_fish", fishweight=2000, description="Blimey What a catch"),
+			data=dict(fishname="test fish", fishweight=2000, description="Blimey What a catch"),
 			follow_redirects = True
 		)
 		fish = Fish(name="carp", minweight=4, maxweight=505)
@@ -104,7 +104,7 @@ class TestUpdate(TestBase):
 	def test_update_catch(self):
 		response = self.client.post(
 			url_for('update', id=1),
-			data=dict(fishname="test_fish", fishweight=2000, description="That catch was easy!"),
+			data=dict(fishname="test fish", fishweight=2000, description="That catch was easy!"),
 			follow_redirects = True 
 		)
 		self.assertIn(b"That catch was easy!", response.data)
