@@ -51,7 +51,7 @@ def create():
                 db.session.add(new_catch)
                 db.session.commit()     
             return redirect(url_for("home"))
-    return render_template('add.html', title="Create a Task", form=form)
+    return render_template('add.html', title="Add a Catch", form=form)
 
 @app.route('/update/<int:id>', methods=["GET", "POST"])
 def update(id):

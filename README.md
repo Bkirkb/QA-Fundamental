@@ -152,7 +152,18 @@ The Delete route works in a similar way, but instead of asserting that the catch
 ![coveragereport](Documentation/testing6.PNG)
 As can be seen, the unit tests have tested most functionality within the application, with only 53% of the lines within the routes being tested, which is attributed to the python logic mentioned earlier. In the future with more knowledge of assertions and unit testing in general, 100% coverage would be highly achievable.
 
-##### Integration Testing
+##### Integration Testing with Selenium
+![importstestbase](Documentation/testing7.PNG)
+Import all relevant modules for testing purposes, Create the testbase using a mock database as with Unit testing. The set-up primarily focuses on setting up the Selenium crhomium driver, and dropping, creating and populating the test database. The first test asserts that the driver is up and running on localhost:5000, verifying it with a response code of 200.
+![testcreate1](Documentation/testing8.PNG)
+Use the selenium chrome driver to target the navigation element of the home page, click the add catch button, and populate the form with the required data.
+assert that the user is redirected to the home page, and assert that a new Catch is present, by searching for id=2 and targeting the description attribute, when the database was only set up with a single catch.
+![testupdate1](Documentation/testing9.PNG)
+Same as above but relating to the update function, does not create a new catch and instead updates the existing catch with a new description. Test asserts that the user has been redirected to the home page
+on form completion, and that the new description is the only description present.
+![testdelete1](Documentation/testing10.PNG)
+The final integration test is to test the delete buttons present on each catch. Selenium is used to target the delete element, and the assertion is made that the Catch table's first entry now returns a None type Object.
+If statement at the bottom to run the live server.
 
 #### Front End Design
 #### Known Issues
