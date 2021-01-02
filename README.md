@@ -124,7 +124,36 @@ Update 17th Dec: Project deadline has been extended to January, as such the spri
 Below is an image of most of the inititial risk assessment, likely to be expanded upon before the end of the project.
 ![risk-assessment](Documentation/Risk-Assessment.PNG)
 #### Testing
-Pytest
+The project achieved the minumum viable product by utilising two testing methods, Unit Testing (Pytest) and Integration testing (Selenium). The following section will detail the testing process and how the total coverage of 70% was met for the unit tests, and how in future 100% coverage could be achieved.
+##### Unit-Testing
+![imports-test-base](Docmentation/testing1.PNG)
+To begin unit tests the relevant imports must be made, which are the unittest module from Python, flask and flask_testing to import url_for and TestCase (which is the foundation to run all unit tests, after setting up the TestBase to use TestCase). finally the app and the database is imported, along with the relevant models to be tested.
+
+Once all imports are complete the TestBase is set up, the first function to run is similar to that within the init.py file, and assigns the database properties for the temporary database to use. SQLite was used in this instance so that the main database did not get affected.
+
+Finally, the SetUp and tearDown functions are assigned, with the self argument passed through. These functions create and populate the database and remove the database, and are run independantly for each test. this ensures that each test is working with the same set of data.
+
+![testviews](Documentation/testing2.PNG)
+With the set-up complete the first thing to test is flask, to ensure that the routes are working as intended and sending back the right status codes, 200 means a successful get request. These tests are asserting that when a user navigates to the url_for('page name') that they are sent there and that the app recognises this. The delete get requests has to allow redirects as the delete function contains a redirect to the home page, allowing for the user to delete an endless amount of posts on the homepage without the page refreshing etc.
+
+![testread](Documentation/testing3.PNG)
+With the routes tested, next is the read functionality within flask. the functions within this test parse through the home page via a get request, and assert that a specific data set will be in the response data. since fish and catches are sharing the majority of their data, the catch entered has different values than those stored within the fish table. As such by ensuring that both "test fish" and the catch fishweight of 2030 are present on the home page, the database is working correctly and flask is displaying the right information.
+
+![testcreate](Documentation/testing4.PNG)
+The create functionality of the app was tested in two seperate ways (though only one affects the coverage report). The first thing that it does is act as a user and send a post request to the create route, entering the data that is required from the user as a new catch, from there it would redirect to the home page, allowing the assertion to test that the data entered in the post request is now in the response data of the home page.
+
+The second function within the create test case is designed to test the logic within the database, and mirrors the functionality found within the routes file. Due to personal inexperience with assertions and unit testing I was not able to directly test the logic within the routes.py file, and instead opted to test the logic within the unit tests by asserting that by running the exact same code, the database values will be updated if the weight of a new catch eclipses the previously stored minumum or maximum values of the fish with the id that matches that within the catch.
+
+![testupdatedelete](Documentation/testing5.PNG)
+Finally with the main functions tested is the last two routes of the CRUD application, Update and Delete. The tests for these is very similar, and asserts that when the user navigates to the update link, and attempts to update the previously existing catches to description, that the description will change to the new description entered within the post request, by using a get request to parse the home page for the new description.
+
+The Delete route works in a similar way, but instead of asserting that the catch data is in the home page, it asserts that by the user navigating to the delete route, and deleting the catch with the associated ID that the catch will no longer be present upon redirecting to the home page.
+
+![coveragereport](Documentation/testing6.PNG)
+As can be seen, the unit tests have tested most functionality within the application, with only 53% of the lines within the routes being tested, which is attributed to the python logic mentioned earlier. In the future with more knowledge of assertions and unit testing in general, 100% coverage would be highly achievable.
+
+##### Integration Testing
+
 #### Front End Design
 #### Known Issues
 #### Future Improvements
