@@ -123,6 +123,8 @@ Update 17th Dec: Project deadline has been extended to January, as such the spri
 
 Below is an image of most of the inititial risk assessment, likely to be expanded upon before the end of the project.
 ![risk-assessment](Documentation/Risk-Assessment.PNG)
+The final risk assessment identified more risks and updated the current risks
+![risk-assessment2](Documentation/Risk-Assessment2.PNG)
 #### Testing
 The project achieved the minumum viable product by utilising two testing methods, Unit Testing (Pytest) and Integration testing (Selenium). The following section will detail the testing process and how the total coverage of 70% was met for the unit tests, and how in future 100% coverage could be achieved.
 ##### Unit-Testing
@@ -164,7 +166,40 @@ on form completion, and that the new description is the only description present
 ![testdelete1](Documentation/testing10.PNG)
 The final integration test is to test the delete buttons present on each catch. Selenium is used to target the delete element, and the assertion is made that the Catch table's first entry now returns a None type Object.
 If statement at the bottom to run the live server.
+![finaltests](Documentation/testing11.PNG)
+17 Total tests for unit and integration, with all passing.
 
 #### Front End Design
+![frontend1](Documentation/frontend1.PNG)
+The front-end design for the application is extremely simple and utilises basic CSS principles to center everything and position the elements. The home page contains just two navigation elements, with the home element acting as a fast refresh option. The user is able to see all catches and all fish within the database from the home page, as well as click update and delete buttons for the catches. Additionally the user can add a catch by using the navigation menu item.
+
+the fish names are automatically put into lower case, which could irritate a user but was done so to avoid database errors. Also as a note, due to the absolute style option being used, the app is best used in full screen at a high resolution.
+
+![frontend2](Documentation/frontend2.PNG)
+The add catch page is also extremely simple, with validated form elements and a basic submit button for users to add their catch to the database.
+![frontend3](Documentation/frontend3.PNG)
+The update page is simple and effective, a user is only allowed to update the description of their catch to avoid database errors.
 #### Known Issues
+ * No error message wghen trying to submit a complete form with incorrect information, for example when letters are used within the weight field.
+ * Numbers can be entered into the fish name field
+ * Webpage can appear skewed when window is resized
 #### Future Improvements
+As a lot of features were cut to meet the MVP there are a variety of improvements for the app. For example:
+* Users and secure log-ins so that specific users can be attributed to and manage their own catches, Implemented with hashed passwords etc.
+* The ability to add multiple fish to a single catch, to streamline the experience for a user entering many catches.
+* Additional information could be provided for catches to ensure a more complete user experience, e.g. data that was cut from previous ERD versions.
+* 100% Test coverage for the unit tests could be achieved with a more robust test strategy and knowledge
+* The ability to delete fish from the database when all associated catches are deleted from the database.
+* Top catch feature that was cut from the MVP
+* More rubust validation to prevent confusion from the user perspective.
+* Aesthetic overhaul to make the front end much more appealing to the user, and to allow the app to fall more in-line with current standards. Implemented via CSS, likely using many of the frameworks available.
+* A region/location feature that would seperate catches and fish for each region, and allow users to pinpoint to other users where they have made their catches.
+
+##### Authors
+Brendan Kirkby
+
+##### Acknowledgements
+Harry Volker: Provided the base for the selenium testing and many other files, guidance throughout the project.
+Nathan Forester: Provided guidance throughout the project
+Sam Birchall: Provided guidance throughout the project, specific help with Linux and Sudoers when implementing the jenkins CI server.
+Jay Grindrod: Provided guidance throughout the project, specific help with database logistics and database models.
