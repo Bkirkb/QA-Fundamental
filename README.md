@@ -126,7 +126,7 @@ Below is an image of most of the inititial risk assessment, likely to be expande
 #### Testing
 The project achieved the minumum viable product by utilising two testing methods, Unit Testing (Pytest) and Integration testing (Selenium). The following section will detail the testing process and how the total coverage of 70% was met for the unit tests, and how in future 100% coverage could be achieved.
 ##### Unit-Testing
-![imports-test-base](Docmentation/testing1.PNG)
+![imports-test-base](Documentation/testing1.PNG)
 To begin unit tests the relevant imports must be made, which are the unittest module from Python, flask and flask_testing to import url_for and TestCase (which is the foundation to run all unit tests, after setting up the TestBase to use TestCase). finally the app and the database is imported, along with the relevant models to be tested.
 
 Once all imports are complete the TestBase is set up, the first function to run is similar to that within the init.py file, and assigns the database properties for the temporary database to use. SQLite was used in this instance so that the main database did not get affected.
