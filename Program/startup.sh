@@ -5,4 +5,4 @@ source venv/bin/activate
 pip3 install -r requirements.txt
 sudo systemctl stop fundamental.service
 sudo systemctl daemon-reload
-pytest --cov=application tests/ --cov-report html
+pytest --cov=application --cov-report html
