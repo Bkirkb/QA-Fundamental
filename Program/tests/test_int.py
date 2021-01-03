@@ -70,7 +70,7 @@ class TestCatchCreation(TestBase):
 
         # Assert that browser redirects to the home page
         assert url_for('home') in self.driver.current_url
-        assert Catches.query.filter_by(id=2).first().description == "fun_catch"
+        assert Catches.query.filter_by(id=1).first().description == "fun_catch"
 
 
 class TestCatchUpdate(TestBase):
