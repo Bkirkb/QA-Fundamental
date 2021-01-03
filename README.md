@@ -113,6 +113,13 @@ The final version of the database structure slightly changes the previous, with 
 After revisions, the design has been greatly simplified for the first sprint, to deliver the MVP as expected. a single one to many relationship can be seen between the Fish and Catches table, with the fish ID linking the two together. The User table has been marked for use in future sprints, indicated with the yellow colouring.
 
 ##### CI Pipeline
+The CI Pipeline for this project revolved around Jenkins and Git. Each time a new build has been pushed to the feature branch a jenkins user has been configured on the VM via editing the etc/sudoers file with the visudo command. this jenkins user is given full permissions and allows jenkins to run.
+![jenkinsconfig](Documentation/config1.PNG)
+![jenkinsconfig2](Documentation/config2.PNG)
+By setting up the Jenkins build with these settings the jenkins server is constantly monitoring the GIT repo, once the branch is assigned within the jenkins configuration the jenkins build will constantly monitor the repository for pushes to the feature branch. Then using another config option, a hook trigger, the build is set to automatically run each time the feature branch has been pushed to.
+![jenkinsconfig3](Documentation/config3.PNG)
+Utilizing a bash script for the build ensures that the application is fully tested and then automatically started, after each push. the script utilises the system daemons and an already configured service file to test the application, and then launch the application to localhost:5000. Whilst the systemd service is running, the app is live. This means that once the feature branch is pushed, the app tests the new features and goes live. The next step would be to implement automatic merging on successful builds.
+
 #### Project Tracking
 The project has been tracked as specified using a kanban style board, using Trello, which can be found [Here](https://trello.com/b/mVD3VaEn/sprint-1-two-week-duration). The Sprint will last/lasted two weeks, starting on the 6th December and Ending on 20th December. By the end of the first week all Documentation should be complete, and by the end of the Second week the MVP will be able to be delivered to the client as specified.
 
