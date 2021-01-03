@@ -120,19 +120,22 @@ By setting up the Jenkins build with these settings the jenkins server is consta
 ![jenkinsconfig3](Documentation/config3.PNG)
 Utilizing a bash script for the build ensures that the application is fully tested and then automatically started, after each push. the script utilises the system daemons and an already configured service file to test the application, and then launch the application to localhost:5000. Whilst the systemd service is running, the app is live. This means that once the feature branch is pushed, the app tests the new features and goes live. The next step would be to implement automatic merging on successful builds.
 
-![cipipeline](Documentation/cidiagram)
+![cipipeline](Documentation/cidiagram.PNG)
+Pictured above is the continuous integration pipeline for the project. It illustrates the stages for the project and how the application seamlessly goes from devleopment to deployment (providing it passes the tests). The CI pipeline for this project utilized all the tools and techniques taught so far, starting with the sprint kanban board tech, coding solutions with python and utilizing imports/various libraries (specifically the database model layer and flask), testing the solutions to the code by writing unit tests and integration tests, using pytest and selenium. From here all the knowledge is compiled and a CI server is integrated to combine everything together, using Jenkins the entire process becomes more streamlined and optimized.
 #### Project Tracking
 The project has been tracked as specified using a kanban style board, using Trello, which can be found [Here](https://trello.com/b/mVD3VaEn/sprint-1-two-week-duration). The Sprint will last/lasted two weeks, starting on the 6th December and Ending on 20th December. By the end of the first week all Documentation should be complete, and by the end of the Second week the MVP will be able to be delivered to the client as specified.
 
 Update 17th Dec: Project deadline has been extended to January, as such the sprint has been modified and the timescales have been adjusted. 
 
 #### Risk Assessment
- The Risk Assessment for the Project can be found in full [Here](https://docs.google.com/spreadsheets/d/1hfYDhvG_HrHr0DTENwdTv7SPDeCxY9-hMgxS1r_XXLA/edit#gid=0)
+ The Risk Assessment for the Project can be found in full [Here](https://docs.google.com/spreadsheets/d/14bKwKKq3BhoeVIBo8IBbqtCPafxTqa7P4NltBeWJxzM/edit#gid=0)
 
 Below is an image of most of the inititial risk assessment, likely to be expanded upon before the end of the project.
 ![risk-assessment](Documentation/Risk-Assessment.PNG)
 The final risk assessment identified more risks and updated the current risks
-![risk-assessment2](Documentation/Risk-Assessment2.PNG)
+![risk-assessment2](Documentation/risk2.PNG)
+After integrating Jenkins more risks were identified and addressed.
+
 #### Testing
 The project achieved the minumum viable product by utilising two testing methods, Unit Testing (Pytest) and Integration testing (Selenium). The following section will detail the testing process and how the total coverage of 70% was met for the unit tests, and how in future 100% coverage could be achieved.
 ##### Unit-Testing
