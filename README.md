@@ -16,7 +16,7 @@ The application must allow the user to CREATE, READ, UPDATE AND DELETE the vario
 * [Documentation](#documentation)
   * [Architecture](#architecture)
     *  [Database Structure](#database-structure)
-    * [CI Pipeline](#ci-pipeline) 
+    * [CI Pipeline](#ci-pipeline)
   * [Project Tracking](#project-tracking)
   * [Risk Assessments](#risk-assessment)
   * [Testing](#testing)
@@ -191,7 +191,7 @@ The add catch page is also extremely simple, with validated form elements and a 
 ![frontend3](Documentation/frontend3.PNG)
 The update page is simple and effective, a user is only allowed to update the description of their catch to avoid database errors.
 #### Known Issues
- * No error message wghen trying to submit a complete form with incorrect information, for example when letters are used within the weight field.
+ * No error message when trying to submit a complete form with incorrect information, for example when letters are used within the weight field.
  * Numbers can be entered into the fish name field
  * Webpage can appear skewed when window is resized
 #### Future Improvements
